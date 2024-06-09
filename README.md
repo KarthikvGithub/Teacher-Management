@@ -29,7 +29,7 @@ npm start
 
 This should initialize the server.
 
-##Deployment
+## Deployment
 
 The project has been deployed using render. You can view the project [here](https://teacher-management-react.onrender.com/)
 
