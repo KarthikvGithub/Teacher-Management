@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+const slink = 'https://teacher-management-5ms3.onrender.com'
+
 const UpdateTeacherForm = ({ teacher, handleUpdate }) => {
     const [updatedTeacher, setUpdatedTeacher] = useState({
         name: teacher.name,
@@ -16,7 +18,7 @@ const UpdateTeacherForm = ({ teacher, handleUpdate }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.put(`${process.env.REACT_APP_API_BASE_URL}/api/teachers/${teacher.name}`, updatedTeacher);
+            const response = await axios.put(`${slink}/api/teachers/${teacher.name}`, updatedTeacher);
             handleUpdate(response.data);
         } catch (error) {
             console.error('Error updating teacher:', error);

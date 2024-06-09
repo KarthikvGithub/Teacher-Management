@@ -8,6 +8,8 @@ import FilterTeacher from './components/FilterTeacher';
 import Footer from './components/Footer';
 import AvgButton from './components/AvgButton';
 
+const link = process.env.REACT_APP_API_BASE_URL;
+
 function App() {
     const [teachers, setTeachers] = useState([]);
     const [view, setView] = useState('all');
@@ -18,19 +20,19 @@ function App() {
     }, []);
 
     const fetchTeachers = async () => {
-        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/teachers`);
+        const response = await axios.get(`${link}/api/teachers`);
         setTeachers(response.data);
     };
 
     const handleAddTeacher = async (newTeacher) => {
-        await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/teachers/add`, newTeacher);
+        await axios.post(`${link}/api/teachers/add`, newTeacher);
         fetchTeachers();
         setView('all');
     };
 
     const handleSearch = async (name) => {
         try {
-            const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/teachers/search?name=${name}`);
+            const response = await axios.get(`${link}/api/teachers/search?name=${name}`);
             setTeachers(response.data);
             setView('all');
         } catch (error) {
@@ -39,7 +41,7 @@ function App() {
     };
 
     const handleFilter = async (age, classes) => {
-        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/teachers/filter`, {
+        const response = await axios.get(`${link}/api/teachers/filter`, {
             params: { age, classes }
         });
         setTeachers(response.data);
@@ -47,17 +49,17 @@ function App() {
     };
 
     const handleUpdateTeacher = async (name, updatedData) => {
-        await axios.put(`${process.env.REACT_APP_API_BASE_URL}/api/teachers/${name}`, updatedData);
+        await axios.put(`${link}/api/teachers/${name}`, updatedData);
         fetchTeachers();
     };
 
     const handleDeleteTeacher = async (name) => {
-        await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/api/teachers/${name}`);
+        await axios.delete(`${link}/api/teachers/${name}`);
         fetchTeachers();
     };
 
     const fetchAverageClasses = async () => {
-        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/teachers/average-classes`);
+        const response = await axios.get(`${link}/api/teachers/average-classes`);
         setAverageClasses(response.data.average_classes);
     };
 
