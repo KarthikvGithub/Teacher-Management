@@ -10,7 +10,7 @@ import AvgButton from './components/AvgButton';
 
 const link = 'https://teacher-management-5ms3.onrender.com';
 
-console.log(link);
+// console.log(link);
 
 function App() {
     const [teachers, setTeachers] = useState([]);
