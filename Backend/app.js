@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use(cors({
-    origin: 'https://teacher-management-5ms3.onrender.com'
+    // origin: `https://teacher-management-react.onrender.com`
 }));
 
 app.use('/api/teachers', teacherRoutes);
