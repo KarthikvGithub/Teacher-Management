@@ -8,9 +8,9 @@ import FilterTeacher from './components/FilterTeacher';
 import Footer from './components/Footer';
 import AvgButton from './components/AvgButton';
 
-const link = process.env.API_BASE_URL;
+const link = 'https://teacher-management-5ms3.onrender.com';
 
-console.log(process.env.API_BASE_URL);
+console.log(link);
 
 function App() {
     const [teachers, setTeachers] = useState([]);
