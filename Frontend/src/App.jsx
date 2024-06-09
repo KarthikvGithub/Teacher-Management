@@ -10,6 +10,8 @@ import AvgButton from './components/AvgButton';
 
 const link = process.env.REACT_APP_API_BASE_URL;
 
+console.log(process.env.REACT_APP_API_BASE_URL);
+
 function App() {
     const [teachers, setTeachers] = useState([]);
     const [view, setView] = useState('all');
