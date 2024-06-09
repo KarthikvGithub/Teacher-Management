@@ -28,3 +28,9 @@ npm start
 ```
 
 This should initialize the server.
+
+##Deployment
+
+The project has been deployed using render. You can view the project [here](https://teacher-management-react.onrender.com/)
+
+Note: Render keeps the server on sleep when inactive. New requests might take 50 seconds to respond at the start.
