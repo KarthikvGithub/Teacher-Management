@@ -1,0 +1,26 @@
+[
+  {
+    "name": "John Dad",
+    "age": 31,
+    "dob": "1990-01-02",
+    "num_classes": 6
+  },
+  {
+    "name": "Karthik Goud",
+    "age": "24",
+    "dob": "2002-09-06",
+    "num_classes": "15"
+  },
+  {
+    "name": "Karthik",
+    "age": "22",
+    "dob": "2005-04-03",
+    "num_classes": "5"
+  },
+  {
+    "name": "Watt",
+    "age": "23",
+    "dob": "2024-06-13",
+    "num_classes": "9"
+  }
+]
