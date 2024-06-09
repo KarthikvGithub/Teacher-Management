@@ -5,7 +5,10 @@ import teacherRoutes from './routes/teachers.js';
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+
+app.use(cors({
+    origin: 'https://teacher-management-react.onrender.com'
+}));
 
 app.use('/api/teachers', teacherRoutes);
 
