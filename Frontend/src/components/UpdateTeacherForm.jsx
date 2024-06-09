@@ -16,7 +16,7 @@ const UpdateTeacherForm = ({ teacher, handleUpdate }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.put(`http://localhost:5000/api/teachers/${teacher.name}`, updatedTeacher);
+            const response = await axios.put(`https://teacher-management-5ms3.onrender.com/api/teachers/${teacher.name}`, updatedTeacher);
             handleUpdate(response.data);
         } catch (error) {
             console.error('Error updating teacher:', error);
