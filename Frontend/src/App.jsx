@@ -8,9 +8,9 @@ import FilterTeacher from './components/FilterTeacher';
 import Footer from './components/Footer';
 import AvgButton from './components/AvgButton';
 
-const link = process.env.REACT_APP_API_BASE_URL;
+const link = process.env.API_BASE_URL;
 
-console.log(process.env.REACT_APP_API_BASE_URL);
+console.log(process.env.API_BASE_URL);
 
 function App() {
     const [teachers, setTeachers] = useState([]);
