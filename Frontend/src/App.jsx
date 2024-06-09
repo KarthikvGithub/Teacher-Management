@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from './Header';
-import TeacherList from './TeacherList';
-import AddTeacherForm from './AddTeacherForm';
-import SearchTeacher from './SearchTeacher';
-import FilterTeacher from './FilterTeacher';
-import Footer from './Footer';
-import AvgButton from './AvgButton';
+import Header from './components/Header';
+import TeacherList from './components/TeacherList';
+import AddTeacherForm from './components/AddTeacherForm';
+import SearchTeacher from './components/SearchTeacher';
+import FilterTeacher from './components/FilterTeacher';
+import Footer from './components/Footer';
+import AvgButton from './components/AvgButton';
 
 function App() {
     const [teachers, setTeachers] = useState([]);
