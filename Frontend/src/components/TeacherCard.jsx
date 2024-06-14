@@ -16,7 +16,7 @@ const TeacherCard = ({ teacher, handleDeleteTeacher }) => {
                         <pre>
                             <p><strong>Name</strong>        :{teacher.name}</p>
                             <p><strong>Age</strong>         :{teacher.age}</p>
-                            <p><strong>DOB</strong>         :{teacher.dob}</p>
+                            <p><strong>DOJ</strong>         :{teacher.dob}</p>
                             <p><strong>Class Count</strong> :{teacher.num_classes}</p>
                         </pre>
                     </div>
